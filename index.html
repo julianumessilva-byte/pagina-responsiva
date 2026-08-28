@@ -3,33 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Postagens - Com Efeito Zoom</title>
+  <title>Portal Web Responsivo & Mini-Jogo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <main class="container">
-    <article class="card">
-      <div class="image-container">
-        <img class="card-image" src="https://picsum.photos/600/400?random=1" alt="Imagem do Post 1">
-      </div>
-      <div class="card-content">
-        <h2 class="card-title">Desenvolvimento Web Moderno</h2>
-        <p class="card-text">Aprenda a criar interfaces incríveis utilizando CSS Flexbox e boas práticas de design responsivo para destacar suas aplicações na web.</p>
-      </div>
-      <button class="card-button">Leia mais</button>
-    </article>
+    <header class="page-header">
+      <h1>Desenvolvimento Web Responsivo</h1>
+      <p>Explore artigos sobre CSS e teste seus conhecimentos no mini-jogo abaixo.</p>
+    </header>
 
-    <article class="card">
-      <div class="image-container">
-        <img class="card-image" src="https://picsum.photos/600/400?random=2" alt="Imagem do Post 2">
-      </div>
-      <div class="card-content">
-        <h2 class="card-title">Dominando o CSS Flexbox</h2>
-        <p class="card-text">Compreenda como controlar o alinhamento individual de elementos com align-self e ajustar o tamanho dos containers usando propriedades flex.</p>
-      </div>
-      <button class="card-button">Leia mais</button>
-    </article>
+    <section class="posts-section">
+      <article class="card">
+        <div class="image-container">
+          <img class="card-image" src="https://picsum.photos/600/400?random=1" alt="Desenvolvimento Web Moderno">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Desenvolvimento Web Moderno</h2>
+          <p class="card-text">Aprenda a criar interfaces incríveis utilizando CSS Flexbox e boas práticas de design responsivo para destacar suas aplicações na web.</p>
+        </div>
+        <button class="card-button">Leia mais</button>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          <img class="card-image" src="https://picsum.photos/600/400?random=2" alt="Dominando o CSS Flexbox">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Dominando o CSS Flexbox</h2>
+          <p class="card-text">Compreenda como controlar o alinhamento individual de elementos com align-self e ajustar o tamanho dos containers usando propriedades flex.</p>
+        </div>
+        <button class="card-button">Leia mais</button>
+      </article>
+    </section>
+
+    <section class="game-card">
+      <h2>🎮 Desafio Interativo: Quiz de CSS</h2>
+      <p id="quiz-question">Carregando pergunta...</p>
+      
+      <div id="quiz-options" class="options-container"></div>
+      
+      <p id="quiz-feedback" class="feedback-text"></p>
+      <button id="next-btn" class="card-button" style="display: none;">Próxima Pergunta</button>
+    </section>
   </main>
 
   <script src="script.js"></script>
