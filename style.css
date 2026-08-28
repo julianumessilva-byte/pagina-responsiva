@@ -8,23 +8,39 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
   padding: 40px 20px;
+  color: #1a1a1a;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Seletor article ajustado conforme os requisitos */
-article {
+.page-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.posts-section {
   display: flex;
-  flex-direction: row; /* Conteúdo exibido em linha */
-  flex: 1 1 100%;     /* Card ocupa 100% da largura */
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card dos Artigos */
+article.card {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
   background-color: #ffffff;
   border-radius: 16px;
   padding: 24px;
@@ -32,17 +48,16 @@ article {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-article:hover {
+article.card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
-/* Container da imagem para prender o zoom dentro das bordas */
 .image-container {
   width: 280px;
-  height: 220px;
+  height: 180px;
   flex-shrink: 0;
-  overflow: hidden; /* Esconde a parte da imagem que cresce além do limite */
+  overflow: hidden;
   border-radius: 12px;
 }
 
@@ -50,12 +65,11 @@ article:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease; /* Transição suave para o efeito de zoom */
+  transition: transform 0.4s ease;
 }
 
-/* Efeito de zoom ao passar o mouse na imagem ou no card */
 article:hover .card-image {
-  transform: scale(1.1); /* Aplica o zoom de 10% */
+  transform: scale(1.1);
 }
 
 .card-content {
@@ -63,21 +77,19 @@ article:hover .card-image {
 }
 
 .card-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 12px;
-  color: #1a1a1a;
 }
 
 .card-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #555555;
 }
 
-/* Utilização de align-self para alinhar o botão no topo */
 .card-button {
   align-self: flex-start;
-  padding: 14px 28px;
+  padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
   background-color: #0066cc;
@@ -91,4 +103,59 @@ article:hover .card-image {
 .card-button:hover {
   background-color: #004999;
   transform: scale(1.03);
+}
+
+/* Estilos do Mini-Jogo */
+.game-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #eef5ff;
+  border-color: #0066cc;
+}
+
+.feedback-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Responsividade para telas menores (smartphones e tablets) */
+@media (max-width: 768px) {
+  article.card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-button {
+    align-self: stretch;
+  }
 }
