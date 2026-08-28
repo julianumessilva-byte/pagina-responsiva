@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      alert(`Você clicou no botão da postagem ${index + 1}!`);
+      alert(`Você clicou para ler a postagem ${index + 1}!`);
     });
   });
 });
