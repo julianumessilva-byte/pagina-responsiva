@@ -7,35 +7,35 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  padding: 20px;
+  padding: 40px; /* Aumentado o espaçamento da página */
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 30px; /* Aumentado o espaço entre os cards */
+  max-width: 1400px; /* Aumentada a largura máxima do container */
   margin: 0 auto;
 }
 
 /* Seletor article ajustado conforme o desafio */
 article {
   display: flex;
-  flex-direction: row; /* Altera o conteúdo de coluna para linha */
+  flex-direction: row; /* Mantém o conteúdo em linha */
   flex: 1 1 100%;     /* Ocupa 100% da largura disponível */
   align-items: center;
-  gap: 20px;
+  gap: 30px;          /* Espaço maior entre imagem, texto e botão */
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;      /* Preenchimento interno maior */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
-  width: 150px;
-  height: 150px;
+  width: 250px;       /* Imagem ampliada */
+  height: 250px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .card-content {
@@ -43,24 +43,27 @@ article {
 }
 
 .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 8px;
+  font-size: 2rem;    /* Título maior */
+  margin-bottom: 16px;
   color: #333333;
 }
 
 .card-text {
-  font-size: 0.95rem;
-  color: #666666;
+  font-size: 1.25rem; /* Texto de descrição maior */
+  line-height: 1.6;
+  color: #555555;
 }
 
-/* Utilização do align-self para alinhar o botão no topo, quebrando o alinhamento centralizado */
+/* align-self mantido no botão */
 .card-button {
   align-self: flex-start;
-  padding: 10px 16px;
+  padding: 16px 28px; /* Botão maior */
+  font-size: 1.1rem;
+  font-weight: bold;
   background-color: #0066cc;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
