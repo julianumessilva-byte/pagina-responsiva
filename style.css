@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Seletor article ajustado conforme o desafio */
+article {
+  display: flex;
+  flex-direction: row; /* Altera o conteúdo de coluna para linha */
+  flex: 1 1 100%;     /* Ocupa 100% da largura disponível */
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+/* Utilização do align-self para alinhar o botão no topo, quebrando o alinhamento centralizado */
+.card-button {
+  align-self: flex-start;
+  padding: 10px 16px;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #004999;
+}
